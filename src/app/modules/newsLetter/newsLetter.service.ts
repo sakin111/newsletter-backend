@@ -41,5 +41,5 @@ const getNews = async (apiKey: string, query: Record<string, any>) => {
 
 
 export const NewLetterService = {
-    getNews
+  getNews
 }

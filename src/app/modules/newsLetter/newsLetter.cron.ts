@@ -1,8 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import cron from "node-cron";
-import { NewLetterService } from "./newsLetter.service";
+
 import { envVar } from "../../config/env";
 import { NewsArticle, NewsSource } from "./newsLetter.model";
+import { NewLetterService } from "./newsLetter.service";
+import cron from "node-cron"
+
 
 
 cron.schedule("* * * * *", async () => {
