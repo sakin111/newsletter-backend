@@ -2,7 +2,8 @@ import { Server } from 'http'
 import mongoose from 'mongoose'
 import { envVar } from './app/config/env'
 import app from './app'
-import "./app/modules/newsLetter/newsLetter.cron"
+import { cronJob } from './app/modules/newsLetter/newsLetter.cron'
+
 
 
 
@@ -24,6 +25,7 @@ const StartServer = async () =>{
 
 (async() =>{
    await StartServer()
+   cronJob()
 })()
 
 process.on("SIGTERM", (err) => {
