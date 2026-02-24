@@ -68,7 +68,7 @@ const fetchStoreData  = async () =>{
 let running  = false
 
 export const cronJob = () => {
-  cron.schedule("* * * * *", async() =>{
+  cron.schedule("0 * * * *", async() =>{
     
   if(running)  return
   running = true
